@@ -1,7 +1,6 @@
 package com.ahao.myapplication.banner;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
@@ -17,7 +16,7 @@ import com.ahao.myapplication.R;
 import java.util.List;
 import java.util.Random;
 
-public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerViewHolder> {
+public class BannerAdapter1 extends RecyclerView.Adapter<BannerAdapter1.BannerViewHolder> {
 
     private List<String> data;
 
@@ -30,7 +29,7 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
 
     private DisplayMetrics displayMetrics;
 
-    public BannerAdapter(List<String> data, Context context) {
+    public BannerAdapter1(List<String> data, Context context) {
         super();
         this.data = data;
         this.context = context;
@@ -56,7 +55,7 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
         return listener;
     }
 
-    public BannerAdapter setListener(onClickListener listener) {
+    public BannerAdapter1 setListener(onClickListener listener) {
         this.listener = listener;
         return this;
     }

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.ahao.myapplication.R;
 
@@ -19,7 +18,7 @@ import butterknife.ButterKnife;
 public class BannerRecyclerActivity extends Activity {////
     @BindView(R.id.recycler_view2)
     RecyclerView recyclerView2;
-    BannerAdapter adapter2;
+    BannerAdapter1 adapter2;
 
     private List<String> data = new ArrayList<>();
 
@@ -33,7 +32,7 @@ public class BannerRecyclerActivity extends Activity {////
     }
 
     private void initData() {
-        adapter2 = new BannerAdapter(data, this);
+        adapter2 = new BannerAdapter1(data, this);
         BannerLayoutManager layoutManager2 = new BannerLayoutManager();
         adapter2.setItemWidth(0.8f);//item的宽
         adapter2.setRatio(0.6f);
@@ -44,7 +43,7 @@ public class BannerRecyclerActivity extends Activity {////
         bannerPageSnapHelper2.setInfinite(true);
         bannerPageSnapHelper2.attachToRecyclerView(recyclerView2);
 
-        adapter2.setListener(new BannerAdapter.onClickListener() {
+        adapter2.setListener(new BannerAdapter1.onClickListener() {
             @Override
             public void onClick() {
                 changeHeight();

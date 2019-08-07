@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.ahao.myapplication.R;
@@ -20,7 +22,7 @@ public class BannerRecyclerActivity extends Activity {////
     RecyclerView recyclerView2;
     BannerAdapter1 adapter2;
 
-    private List<String> data = new ArrayList<>();
+    private List<Entity> data = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {//
@@ -31,8 +33,17 @@ public class BannerRecyclerActivity extends Activity {////
         initDataSource();
     }
 
+    public void onClick(View view){
+        switch (view.getId()) {
+            case R.id.btn_dialog:
+                BottomDialog dialog = new BottomDialog(BannerRecyclerActivity.this, data);
+                dialog.showDialog();
+                break;
+        }
+    }
+
     private void initData() {
-        adapter2 = new BannerAdapter1(data, this);
+        adapter2 = new BannerAdapter1(data, BannerRecyclerActivity.this);
         BannerLayoutManager layoutManager2 = new BannerLayoutManager();
         adapter2.setItemWidth(0.8f);//item的宽
         adapter2.setRatio(0.6f);
@@ -81,8 +92,10 @@ public class BannerRecyclerActivity extends Activity {////
     }
 
     private void initDataSource() {
+        data.clear();
         for (int i = 0; i < 10; i++) {
-            data.add(i + "");
+            Entity entity = new Entity("我的=="+i);
+            data.add(entity);
         }
         adapter2.notifyDataSetChanged();
     }

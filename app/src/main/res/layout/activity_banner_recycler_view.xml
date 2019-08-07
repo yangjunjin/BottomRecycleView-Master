@@ -5,6 +5,14 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/btn_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示对话框"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view2"
         android:layout_width="match_parent"

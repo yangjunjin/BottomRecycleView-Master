@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class BannerAdapter1 extends RecyclerView.Adapter<BannerAdapter1.BannerViewHolder> {
 
-    private List<String> data;
+    private List<Entity> data;
 
     private Context context;
 
@@ -29,7 +29,7 @@ public class BannerAdapter1 extends RecyclerView.Adapter<BannerAdapter1.BannerVi
 
     private DisplayMetrics displayMetrics;
 
-    public BannerAdapter1(List<String> data, Context context) {
+    public BannerAdapter1(List<Entity> data, Context context) {
         super();
         this.data = data;
         this.context = context;
@@ -67,7 +67,7 @@ public class BannerAdapter1 extends RecyclerView.Adapter<BannerAdapter1.BannerVi
 
     @Override
     public void onBindViewHolder(@NonNull final BannerViewHolder holder, final int position) {
-        holder.textView.setText(data.get(position));
+        holder.textView.setText(data.get(position).getName());
 //        holder.textView.setBackgroundColor(Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
 //        ViewGroup.LayoutParams layoutParams = holder.textView.getLayoutParams();
 //        layoutParams.width = (int) (displayMetrics.widthPixels * itemWidth);

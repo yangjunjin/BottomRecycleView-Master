@@ -1,4 +1,4 @@
-#Wed Aug 07 14:34:36 CST 2019
+#Wed Aug 07 15:30:20 CST 2019
 base.0=D\:\\DownLoad\\BannerRecyclerView-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex

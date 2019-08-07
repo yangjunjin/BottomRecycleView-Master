@@ -23,7 +23,7 @@ public class BannerRecyclerActivity extends Activity {////
     private List<String> data = new ArrayList<>();
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {//
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner_recycler_view);
         ButterKnife.bind(this);

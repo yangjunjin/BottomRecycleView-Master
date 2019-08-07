@@ -15,7 +15,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BannerRecyclerActivity extends Activity {
+public class BannerRecyclerActivity extends Activity {////
     @BindView(R.id.recycler_view2)
     RecyclerView recyclerView2;
     BannerAdapter adapter2;

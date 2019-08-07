@@ -76,7 +76,7 @@ public class BannerRecyclerActivity extends Activity {////
                 float currentValue = (float) animation.getAnimatedValue();
                 params.height = (int) currentValue;
                 recyclerView2.setLayoutParams(params);
-                recyclerView2.invalidate();
+//                recyclerView2.postInvalidate();
             }
         });
         anim.start();

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Aug 07 10:46:51 CST 2019
+#Wed Aug 07 11:09:49 CST 2019
 0.baseType=DIRECTORY
 0.base=D\:\\DownLoad\\BannerRecyclerView-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 0.path=classes.dex

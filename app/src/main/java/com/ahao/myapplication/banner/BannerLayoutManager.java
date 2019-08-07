@@ -20,7 +20,7 @@ public class BannerLayoutManager extends RecyclerView.LayoutManager implements R
     private int itemWidth;
 
     private int smoothScrollTime = 300;
-    private int mBottom = 300;
+    private int mBottom = 1000;
     private int mTop = 100;
 
     public BannerLayoutManager() {
@@ -57,7 +57,6 @@ public class BannerLayoutManager extends RecyclerView.LayoutManager implements R
             measureChildWithMargins(viewForPosition, 0, 0);
             offsetX += layoutItem(viewForPosition, offsetX);
         }
-
 
         View lastChild = getChildAt(getChildCount() - 1);
         // 如果是循环布局，并且最后一个view已超出父布局，则添加最左边的view

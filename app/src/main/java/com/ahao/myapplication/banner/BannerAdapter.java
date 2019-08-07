@@ -69,7 +69,7 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
     @Override
     public void onBindViewHolder(@NonNull final BannerViewHolder holder, final int position) {
         holder.textView.setText(data.get(position));
-        holder.textView.setBackgroundColor(Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
+//        holder.textView.setBackgroundColor(Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
 //        ViewGroup.LayoutParams layoutParams = holder.textView.getLayoutParams();
 //        layoutParams.width = (int) (displayMetrics.widthPixels * itemWidth);
 //        layoutParams.height = (int) (layoutParams.width * ratio);

@@ -80,14 +80,13 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
         return data.size();
     }
 
-    public class BannerViewHolder extends RecyclerView.ViewHolder {
+    public static class BannerViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
 
         public BannerViewHolder(View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.text);
         }
-
     }
 
     public float getItemWidth() {

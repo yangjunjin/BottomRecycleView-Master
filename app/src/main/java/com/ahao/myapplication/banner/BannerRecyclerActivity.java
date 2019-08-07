@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.ahao.myapplication.R;
 
@@ -54,13 +55,6 @@ public class BannerRecyclerActivity extends Activity {////
     boolean isOpen = false;//是否打开了
 
     private void changeHeight() {
-//   RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) recyclerView2.getLayoutParams();  
-//                params.width = dip2px(MainActivity.this, width);  
-//                params.height = dip2px(MainActivity.this, height);  
-//                // params.setMargins(dip2px(MainActivity.this, 1), 0, 0, 0); // 可以实现设置位置信息，如居左距离，其它类推  
-//                // params.leftMargin = dip2px(MainActivity.this, 1);  
-//                imageView.setLayoutParams(params);  
-
         final RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) recyclerView2.getLayoutParams();
         params.width = params.width;
         params.height = params.height;
@@ -76,15 +70,10 @@ public class BannerRecyclerActivity extends Activity {////
                 float currentValue = (float) animation.getAnimatedValue();
                 params.height = (int) currentValue;
                 recyclerView2.setLayoutParams(params);
-//                recyclerView2.postInvalidate();
             }
         });
         anim.start();
         isOpen = !isOpen;
-    }
-
-    private void startAnimation(float start,float end) {
-
     }
 
     public int dip2px(int dip) {

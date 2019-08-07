@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/text"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
     android:layout_width="280dp"
     android:layout_height="250dp"
+    android:background="@color/colorPrimary"
     android:gravity="center"
     android:text="dsda"
     android:textColor="#000"
-    android:textSize="30sp"
-    android:background="@color/colorPrimary">
+    android:textSize="30sp">
 
-</TextView>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="dsda"
+        android:textColor="#000"
+        android:textSize="30sp" />
+
+</RelativeLayout>

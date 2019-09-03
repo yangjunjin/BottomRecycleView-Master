@@ -4,10 +4,10 @@ import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import com.ahao.myapplication.R;
 
@@ -17,10 +17,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BannerRecyclerActivity extends Activity {////
+public class BannerRecyclerActivity extends Activity {
     @BindView(R.id.recycler_view2)
     RecyclerView recyclerView2;
-    BannerAdapter1 adapter2;
+    BannerAdapter adapter2;
 
     private List<Entity> data = new ArrayList<>();
 
@@ -33,28 +33,21 @@ public class BannerRecyclerActivity extends Activity {////
         initDataSource();
     }
 
-    public void onClick(View view){
-        switch (view.getId()) {
-            case R.id.btn_dialog:
-                BottomDialog dialog = new BottomDialog(BannerRecyclerActivity.this, data);
-                dialog.showDialog();
-                break;
-        }
-    }
 
     private void initData() {
-        adapter2 = new BannerAdapter1(data, BannerRecyclerActivity.this);
+        adapter2 = new BannerAdapter(data, BannerRecyclerActivity.this);
         BannerLayoutManager layoutManager2 = new BannerLayoutManager();
-        adapter2.setItemWidth(0.8f);//item的宽
-        adapter2.setRatio(0.6f);
         recyclerView2.setAdapter(adapter2);
         recyclerView2.setLayoutManager(layoutManager2);
 
-        BannerPageSnapHelper bannerPageSnapHelper2 = new BannerPageSnapHelper();
-        bannerPageSnapHelper2.setInfinite(true);
+//        BannerPageSnapHelper bannerPageSnapHelper2 = new BannerPageSnapHelper();
+//        bannerPageSnapHelper2.setInfinite(true);
+//        bannerPageSnapHelper2.attachToRecyclerView(recyclerView2);
+
+        LinearSnapHelper bannerPageSnapHelper2 = new LinearSnapHelper();
         bannerPageSnapHelper2.attachToRecyclerView(recyclerView2);
 
-        adapter2.setListener(new BannerAdapter1.onClickListener() {
+        adapter2.setListener(new BannerAdapter.onClickListener() {
             @Override
             public void onClick() {
                 changeHeight();
@@ -65,11 +58,11 @@ public class BannerRecyclerActivity extends Activity {////
     boolean isOpen = false;//是否打开了
 
     private void changeHeight() {
-        final RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) recyclerView2.getLayoutParams();
+        final ViewGroup.LayoutParams params = (ViewGroup.LayoutParams) recyclerView2.getLayoutParams();
         params.width = params.width;
         params.height = params.height;
         float start = params.height, end = 0f;
-        end = isOpen ? dip2px(250) : dip2px(440);
+        end = isOpen ? dip2px(263) : dip2px(495);
 
         //执行动画
         ValueAnimator anim = ValueAnimator.ofFloat(start, end);
@@ -94,9 +87,19 @@ public class BannerRecyclerActivity extends Activity {////
     private void initDataSource() {
         data.clear();
         for (int i = 0; i < 10; i++) {
-            Entity entity = new Entity("我的=="+i);
+            Entity entity = new Entity("我的==" + i);
             data.add(entity);
         }
         adapter2.notifyDataSetChanged();
     }
+
+
+//    public void onClick(View view){
+//        switch (view.getId()) {
+//            case R.id.btn_dialog:
+//                BottomDialog dialog = new BottomDialog(BannerRecyclerActivity.this, data);
+//                dialog.showDialog();
+//                break;
+//        }
+//    }
 }

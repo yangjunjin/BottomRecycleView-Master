@@ -6,29 +6,23 @@
     density="xxhdpi"
     format="10"
     plugin-version="3.4.0"
-    timestamp="1565159650901"
+    timestamp="1567474565050"
     token="5120108484170675361"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="468" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="73" />
+        duration="0" />
     <task
         name="verifier"
-        duration="12" />
+        duration="0" />
 
-    <artifact
-        location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
     <artifact
         location="D:\DownLoad\BannerRecyclerView-master\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
@@ -81,6 +75,9 @@
         location="D:\DownLoad\BannerRecyclerView-master\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
+        location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
         location="D:\DownLoad\BannerRecyclerView-master\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
     <artifact
@@ -92,17 +89,14 @@
     <artifact
         location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
         type="SPLIT" />
+    <artifact
+        location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1565159650901"
+        timestamp="1567474565050"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="D:\DownLoad\BannerRecyclerView-master\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
@@ -155,6 +149,9 @@
             location="D:\DownLoad\BannerRecyclerView-master\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\DownLoad\BannerRecyclerView-master\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
@@ -166,6 +163,9 @@
         <artifact
             location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
+        <artifact
+            location="D:\DownLoad\BannerRecyclerView-master\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

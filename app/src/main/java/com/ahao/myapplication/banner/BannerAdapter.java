@@ -16,7 +16,7 @@ import com.ahao.myapplication.R;
 import java.util.List;
 import java.util.Random;
 
-public class BannerAdapter1 extends RecyclerView.Adapter<BannerAdapter1.BannerViewHolder> {
+public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerViewHolder> {
 
     private List<Entity> data;
 
@@ -29,7 +29,7 @@ public class BannerAdapter1 extends RecyclerView.Adapter<BannerAdapter1.BannerVi
 
     private DisplayMetrics displayMetrics;
 
-    public BannerAdapter1(List<Entity> data, Context context) {
+    public BannerAdapter(List<Entity> data, Context context) {
         super();
         this.data = data;
         this.context = context;
@@ -51,11 +51,7 @@ public class BannerAdapter1 extends RecyclerView.Adapter<BannerAdapter1.BannerVi
         return holder;
     }
 
-    public onClickListener getListener() {
-        return listener;
-    }
-
-    public BannerAdapter1 setListener(onClickListener listener) {
+    public BannerAdapter setListener(onClickListener listener) {
         this.listener = listener;
         return this;
     }

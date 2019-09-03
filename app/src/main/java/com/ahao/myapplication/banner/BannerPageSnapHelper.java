@@ -12,8 +12,7 @@ public class BannerPageSnapHelper extends PagerSnapHelper {
     private OrientationHelper horizontalHelper;
 
     @Override
-    public int findTargetSnapPosition(RecyclerView.LayoutManager layoutManager, int velocityX,
-                                      int velocityY) {
+    public int findTargetSnapPosition(RecyclerView.LayoutManager layoutManager, int velocityX, int velocityY) {
         final int itemCount = layoutManager.getItemCount();
         if (itemCount == 0) {
             return RecyclerView.NO_POSITION;

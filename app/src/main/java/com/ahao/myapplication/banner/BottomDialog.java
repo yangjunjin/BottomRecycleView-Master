@@ -3,7 +3,6 @@ package com.ahao.myapplication.banner;
 import android.animation.ValueAnimator;
 import android.app.Dialog;
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -11,10 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 
 import com.ahao.myapplication.R;
@@ -74,7 +70,7 @@ public class BottomDialog extends Dialog implements View.OnClickListener {
         recyclerView = inflate.findViewById(R.id.recyclerView);
         root = inflate.findViewById(R.id.root);
 
-        BannerAdapter1 adapter = new BannerAdapter1(mlist,mContext);
+        BannerAdapter adapter = new BannerAdapter(mlist,mContext);
         BannerLayoutManager layoutManager2 = new BannerLayoutManager();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager2);
@@ -83,7 +79,7 @@ public class BottomDialog extends Dialog implements View.OnClickListener {
         bannerPageSnapHelper2.setInfinite(true);
         bannerPageSnapHelper2.attachToRecyclerView(recyclerView);
 
-        adapter.setListener(new BannerAdapter1.onClickListener() {
+        adapter.setListener(new BannerAdapter.onClickListener() {
             @Override
             public void onClick() {
                 changeHeight();

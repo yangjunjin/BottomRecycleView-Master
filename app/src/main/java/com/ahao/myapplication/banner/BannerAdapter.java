@@ -1,6 +1,7 @@
 package com.ahao.myapplication.banner;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
@@ -25,7 +26,7 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
     private Random random = new Random();
 
     private float itemWidth = 1.0f;
-    private float ratio = 0.5f;  // 宽高比
+    private float ratio = 1.0f;  // 宽高比
 
     private DisplayMetrics displayMetrics;
 

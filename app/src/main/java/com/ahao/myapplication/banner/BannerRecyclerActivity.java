@@ -20,12 +20,12 @@ import butterknife.ButterKnife;
 public class BannerRecyclerActivity extends Activity {
     @BindView(R.id.recycler_view2)
     RecyclerView recyclerView2;
-    BannerAdapter adapter2;
 
+    public BannerAdapter adapter2;
     private List<Entity> data = new ArrayList<>();
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {//
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner_recycler_view);
         ButterKnife.bind(this);
@@ -33,16 +33,11 @@ public class BannerRecyclerActivity extends Activity {
         initDataSource();
     }
 
-
     private void initData() {
         adapter2 = new BannerAdapter(data, BannerRecyclerActivity.this);
         BannerLayoutManager layoutManager2 = new BannerLayoutManager();
         recyclerView2.setAdapter(adapter2);
         recyclerView2.setLayoutManager(layoutManager2);
-
-//        BannerPageSnapHelper bannerPageSnapHelper2 = new BannerPageSnapHelper();
-//        bannerPageSnapHelper2.setInfinite(true);
-//        bannerPageSnapHelper2.attachToRecyclerView(recyclerView2);
 
         LinearSnapHelper bannerPageSnapHelper2 = new LinearSnapHelper();
         bannerPageSnapHelper2.attachToRecyclerView(recyclerView2);
@@ -92,7 +87,6 @@ public class BannerRecyclerActivity extends Activity {
         }
         adapter2.notifyDataSetChanged();
     }
-
 
 //    public void onClick(View view){
 //        switch (view.getId()) {

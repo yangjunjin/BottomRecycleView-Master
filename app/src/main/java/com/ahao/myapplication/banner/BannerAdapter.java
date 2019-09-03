@@ -8,6 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,7 +43,7 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
     public BannerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.view_banner_item, parent, false);
         final BannerViewHolder holder = new BannerViewHolder(view);
-        holder.textView.setOnClickListener(new View.OnClickListener() {
+        holder.root.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "onclick :" + holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
@@ -69,6 +70,11 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
 //        ViewGroup.LayoutParams layoutParams = holder.textView.getLayoutParams();
 //        layoutParams.width = (int) (displayMetrics.widthPixels * itemWidth);
 //        layoutParams.height = (int) (layoutParams.width * ratio);
+         if(data.get(0).isOpen()){
+             holder.tvMeddle.setVisibility(View.VISIBLE);
+         }else{
+             holder.tvMeddle.setVisibility(View.GONE);
+         }
     }
 
     @Override
@@ -78,10 +84,14 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
 
     public static class BannerViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
+        TextView tvMeddle;
+        RelativeLayout root;
 
         public BannerViewHolder(View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.text);
+            tvMeddle = itemView.findViewById(R.id.tvMeddle);
+            root = itemView.findViewById(R.id.root);
         }
     }
 

@@ -6,6 +6,16 @@ package com.ahao.myapplication.banner;
  */
 public class Entity {
     private String name;
+    boolean open;
+
+    public boolean isOpen() {
+        return open;
+    }
+
+    public Entity setOpen(boolean open) {
+        this.open = open;
+        return this;
+    }
 
     public Entity(String name) {
         this.name = name;

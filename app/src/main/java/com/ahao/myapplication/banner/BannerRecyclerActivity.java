@@ -68,6 +68,9 @@ public class BannerRecyclerActivity extends Activity {
                 float currentValue = (float) animation.getAnimatedValue();
                 params.height = (int) currentValue;
                 recyclerView2.setLayoutParams(params);
+
+                data.get(0).setOpen(isOpen);
+                adapter2.notifyDataSetChanged();
             }
         });
         anim.start();

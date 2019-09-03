@@ -794,6 +794,8 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id tvBottom
+id tvMeddle
 id uniform
 id up
 id useLogo

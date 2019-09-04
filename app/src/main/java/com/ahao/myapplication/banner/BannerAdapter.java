@@ -59,6 +59,7 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
     }
 
     onClickListener listener;
+
     public interface onClickListener {
         void onClick();
     }
@@ -66,15 +67,16 @@ public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.BannerView
     @Override
     public void onBindViewHolder(@NonNull final BannerViewHolder holder, final int position) {
         holder.textView.setText(data.get(position).getName());
-//        holder.textView.setBackgroundColor(Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
-//        ViewGroup.LayoutParams layoutParams = holder.textView.getLayoutParams();
-//        layoutParams.width = (int) (displayMetrics.widthPixels * itemWidth);
-//        layoutParams.height = (int) (layoutParams.width * ratio);
-         if(data.get(0).isOpen()){
-             holder.tvMeddle.setVisibility(View.VISIBLE);
-         }else{
-             holder.tvMeddle.setVisibility(View.GONE);
-         }
+        holder.textView.setBackgroundColor(Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
+        ViewGroup.LayoutParams layoutParams = holder.textView.getLayoutParams();
+        layoutParams.width = (int) (displayMetrics.widthPixels * itemWidth);
+        layoutParams.height = (int) (layoutParams.width * ratio);
+//        if (data.get(0).isOpen()) {
+//            holder.tvMeddle.setVisibility(View.VISIBLE);
+//        } else {
+//            holder.tvMeddle.setVisibility(View.GONE);
+//        }
+//        holder.tvMeddle.setVisibility(View.VISIBLE);
     }
 
     @Override

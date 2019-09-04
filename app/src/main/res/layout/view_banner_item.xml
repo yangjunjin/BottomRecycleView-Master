@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
     android:layout_width="280dp"
-    android:layout_height="263dp"
+    android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     android:text="dsda"
     android:textColor="#000"
@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:text="dsda"
@@ -21,7 +21,7 @@
     <TextView
         android:id="@+id/tvMeddle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:layout_below="@id/text"
@@ -33,7 +33,7 @@
     <TextView
         android:id="@+id/tvBottom"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="95dp"
         android:layout_below="@id/tvMeddle"
         android:layout_centerHorizontal="true"
         android:layout_alignParentLeft="true"

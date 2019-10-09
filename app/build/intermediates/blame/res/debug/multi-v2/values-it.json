@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\DownLoad\\BannerRecyclerView-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
+            "outputFile": "D:\\download\\RecycleViewCenter\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\204686b74490dd69bf5fbc09dafc97ec\\res\\values-it\\values-it.xml",

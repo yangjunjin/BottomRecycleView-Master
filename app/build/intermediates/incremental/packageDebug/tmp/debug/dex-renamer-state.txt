@@ -1,4 +1,4 @@
-#Tue Sep 03 17:46:14 CST 2019
-base.0=D\:\\DownLoad\\BannerRecyclerView-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+#Wed Oct 09 08:01:45 CST 2019
+base.0=D\:\\download\\RecycleViewCenter\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex

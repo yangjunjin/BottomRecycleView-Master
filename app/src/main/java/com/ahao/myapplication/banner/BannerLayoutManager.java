@@ -7,7 +7,6 @@ import android.view.View;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-
 public class BannerLayoutManager extends RecyclerView.LayoutManager implements RecyclerView.SmoothScroller.ScrollVectorProvider {
 
     private final OrientationHelper mOrientationHelper;
